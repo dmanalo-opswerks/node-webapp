@@ -2,7 +2,9 @@ FROM node:lts-slim
 
 EXPOSE 3000
 WORKDIR /home/node/app
-RUN npm install
+RUN <<EOF
+npm install
+EOF
 
 COPY . /home/node/app
 
