@@ -7,7 +7,7 @@ pipeline {
         stage('Building') {
             steps {
                 script {
-                    sh 'mkdir -p /home/node/app/ && cp /home/dmanalo/workspace/node-app/* /home/node/app/'
+                    sh 'mkdir -p /home/node/app/ && cp -r /home/dmanalo/workspace/node-app/* /home/node/app/'
                     dockerImage = docker.build('node-app-image', '/home/dmanalo/workspace/node-app/')
                     dockerImage.push()
                 }
