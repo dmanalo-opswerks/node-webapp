@@ -16,7 +16,7 @@ pipeline {
         stage('Deployment') {
             steps {
                 script {
-                    sh 'docker run --name my-node-app -d node-app-image
+                    sh 'docker run --name my-node-app -d node-app-image'
                 }
             }
         }
